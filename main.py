@@ -14,24 +14,24 @@ for product in products:
     # Initialize a new figure for the product
     fig = go.Figure()
 
-    # Add a scatter trace for Ask Prices in blue
+    # Add a scatter trace for Ask Prices in red (100% opaque, larger size)
     fig.add_trace(
         go.Scatter(
             x=product_df["timestamp"],
             y=product_df["ask_price_1"],
             mode="markers",
-            marker=dict(color="blue", size=4, opacity=0.5),
+            marker=dict(color="red", size=8, opacity=1.0),
             name="Ask Price 1",
         )
     )
 
-    # Add a scatter trace for Bid Prices in red
+    # Add a scatter trace for Bid Prices in blue (100% opaque, larger size)
     fig.add_trace(
         go.Scatter(
             x=product_df["timestamp"],
             y=product_df["bid_price_1"],
             mode="markers",
-            marker=dict(color="red", size=4, opacity=0.5),
+            marker=dict(color="blue", size=8, opacity=1.0),
             name="Bid Price 1",
         )
     )
